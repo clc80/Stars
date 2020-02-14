@@ -14,6 +14,8 @@
 		3AA95E6723F63EB500488591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA95E6623F63EB500488591 /* Assets.xcassets */; };
 		3AA95E6A23F63EB500488591 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA95E6823F63EB500488591 /* LaunchScreen.storyboard */; };
 		3AA95E7723F6471D00488591 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA95E7623F6471D00488591 /* Star.swift */; };
+		3AA95E7923F6477E00488591 /* StarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA95E7823F6477E00488591 /* StarController.swift */; };
+		3AA95E7B23F64CB400488591 /* StarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA95E7A23F64CB400488591 /* StarTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		3AA95E6923F63EB500488591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AA95E6B23F63EB500488591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AA95E7623F6471D00488591 /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
+		3AA95E7823F6477E00488591 /* StarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarController.swift; sourceTree = "<group>"; };
+		3AA95E7A23F64CB400488591 /* StarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				3AA95E6323F63EB400488591 /* Main.storyboard */,
+				3AA95E7A23F64CB400488591 /* StarTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -98,6 +103,7 @@
 		3AA95E7423F63F2100488591 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3AA95E7823F6477E00488591 /* StarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -182,7 +188,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AA95E6223F63EB400488591 /* StarViewController.swift in Sources */,
+				3AA95E7B23F64CB400488591 /* StarTableViewCell.swift in Sources */,
 				3AA95E5E23F63EB400488591 /* AppDelegate.swift in Sources */,
+				3AA95E7923F6477E00488591 /* StarController.swift in Sources */,
 				3AA95E6023F63EB400488591 /* SceneDelegate.swift in Sources */,
 				3AA95E7723F6471D00488591 /* Star.swift in Sources */,
 			);

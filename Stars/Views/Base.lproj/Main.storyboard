@@ -66,7 +66,7 @@
                                 <rect key="frame" x="0.0" y="227" width="414" height="635"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StarCell" rowHeight="70" id="eSO-us-50J">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StarCell" rowHeight="70" id="eSO-us-50J" customClass="StarTableViewCell" customModule="Stars" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eSO-us-50J" id="tBJ-lo-HiU">
@@ -98,6 +98,10 @@
                                                 <constraint firstItem="O80-Hd-r7m" firstAttribute="centerY" secondItem="tBJ-lo-HiU" secondAttribute="centerY" id="xkd-FP-80l"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="distanceLabel" destination="2AJ-1a-Uz7" id="YPs-3a-EX2"/>
+                                            <outlet property="nameLabel" destination="iLq-oC-1hM" id="dXd-5U-Xht"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
