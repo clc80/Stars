@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StarViewController.swift
 //  Stars
 //
 //  Created by Claudia Contreras on 2/13/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
