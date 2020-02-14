@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct Star {
+    var name: String
+    var distance: Double
+}
