@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Star {
+//Need to say that this can be stored into data by conforming to Codable
+struct Star: Codable {
     var name: String
     var distance: Double
     
@@ -16,4 +17,6 @@ struct Star {
     var distanceDescription: String {
         return "\(distance) light years away"
     }
+    
+    
 }
