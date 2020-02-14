@@ -10,11 +10,24 @@ import UIKit
 
 class StarViewController: UIViewController {
 
+    // MARK: - IBOutlets
+    @IBOutlet var starNameTextField: UITextField!
+    @IBOutlet var distanceTextField: UITextField!
+    @IBOutlet var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
 
+    }
+    
+    // MARK: - IBActions
+    @IBAction func printStarsTapped(_ sender: Any) {
+    }
+    
+    @IBAction func createButtonTapped(_ sender: Any) {
+    }
+    
 
 }
 
