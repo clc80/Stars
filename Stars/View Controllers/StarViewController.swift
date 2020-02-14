@@ -55,9 +55,9 @@ class StarViewController: UIViewController {
         tableView.reloadData()
     }
     
-
 }
 
+// MARK: - Extensions
 extension StarViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

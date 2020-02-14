@@ -15,25 +15,26 @@ import Foundation
 
 class StarController {
     
-    // private set means that Stars can only be set by the star controller itself
+    // Private set means that Stars can only be set by the star controller itself
     private(set) var stars: [Star] = []
     
+    //MARK: - Methods
     // CRUD
-    // discardable Result allows us to be flexible about whether or not we want to do something with our result
+    // Discardable Result allows us to be flexible about whether or not we want to do something with our result
     @discardableResult func createStar(named name: String, withDistance distance: Double) -> Star {
         
-        // 1. create an instance of a star with the passed in info
+        // 1. Create an instance of a star with the passed in info
         let star = Star(name: name, distance: distance)
         
-        // 2. append it
+        // 2. Append it
         stars.append(star)
         
-        // 3. return a star
+        // 3. Return a star
         return star
         
-    } // end of @discardableResult func createStar
+    } // end @discardableResult func createStar
     
-    //List the stars in star controller
+    // List the stars in star controller
     func listStars() -> String {
         var output = ""
         for star in stars {
