@@ -33,8 +33,14 @@ class StarController {
         return documents.appendingPathComponent("stars.plist")
     }
     
+    init() {
+        loadFromPersistentStore()
+    }
+    
     
     //MARK: - Methods
+    
+    
     // CRUD
     // Discardable Result allows us to be flexible about whether or not we want to do something with our result
     @discardableResult func createStar(named name: String, withDistance distance: Double) -> Star {
@@ -65,6 +71,7 @@ class StarController {
     
     //Save and load methods
     func saveToPersistentStore() {
+        //Srars -> Data -> Plist
         //place to store the data
         guard let url = persistentFileURL else { return }
         
@@ -72,14 +79,39 @@ class StarController {
         do {
             //Get ready to encode the data
             let encoder = PropertyListEncoder()
+            
             //the encoded data
             let data = try encoder.encode(stars)
+            
             //write to the url
             try data.write(to: url)
+            
         } catch {
             print("Error saving star data: \(error)")
         }
         
+    }
+    
+    func loadFromPersistentStore() {
+        //Plist -> Data -> Stars
+        
+        let fileManager = FileManager.default
+        //Make sure that the file exists at our selected path
+        guard let url = persistentFileURL, fileManager.fileExists(atPath: url.path) else { return }
+        
+        do {
+            //pull the data from the url
+            let data = try Data(contentsOf: url)
+            
+            //to decode the data
+            let decoder = PropertyListDecoder()
+            
+            // Decode the data and place in array
+            stars = try decoder.decode([Star].self, from: data)
+            
+        } catch {
+            print("error loading data: \(error)")
+        }
     }
     
 }
