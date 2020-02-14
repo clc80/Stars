@@ -23,7 +23,7 @@ class StarTableViewCell: UITableViewCell {
     //MARK: - Method
     private func updateViews() {
         nameLabel.text = star?.name
-        distanceLabel.text = "\(star!.distance)"
+        distanceLabel.text = star?.distanceDescription
     }
     
 }

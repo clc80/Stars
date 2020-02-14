@@ -11,4 +11,9 @@ import Foundation
 struct Star {
     var name: String
     var distance: Double
+    
+    // Computed Property
+    var distanceDescription: String {
+        return "\(distance) light years away"
+    }
 }

@@ -21,16 +21,21 @@ class StarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
 
     }
     
     // MARK: - IBActions
     @IBAction func printStarsTapped(_ sender: Any) {
+        //For development purposes only
+        print(starController.listStars())
     }
     
     @IBAction func createButtonTapped(_ sender: Any) {
         
-        // validate the input before creating a star object
+        // Validate the input before creating a star object
         guard let name = starNameTextField.text,
             let distanceString = distanceTextField.text,
             !name.isEmpty, !distanceString.isEmpty,
@@ -43,7 +48,7 @@ class StarViewController: UIViewController {
         starNameTextField.text = ""
         distanceTextField.text = ""
         
-        // put the cursor back in this text field
+        // Put the cursor back in this text field
         starNameTextField.becomeFirstResponder()
         
         // We want the table view to repopulate with that data
@@ -54,6 +59,7 @@ class StarViewController: UIViewController {
 }
 
 extension StarViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //The data is in the starController
@@ -61,13 +67,13 @@ extension StarViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "StarCell", for: indexPath) as? StarTableViewCell else { return UITableViewCell() }
         
         let star = starController.stars[indexPath.row]
         cell.star = star
         return cell
     }
-    
     
 }
 

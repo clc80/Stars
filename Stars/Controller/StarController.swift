@@ -33,5 +33,15 @@ class StarController {
         
     } // end of @discardableResult func createStar
     
+    //List the stars in star controller
+    func listStars() -> String {
+        var output = ""
+        for star in stars {
+            output += "\(star.name) is \(star.distanceDescription).\n"
+        }
+        
+        return output
+    } // end func listStars()
+    
 }
 
